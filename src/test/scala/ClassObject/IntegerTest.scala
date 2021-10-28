@@ -17,11 +17,11 @@ class IntegerTest extends AnyFunSuite {
   }
 
   test("Predecessor of three should return two") {
-    assert(three.predecessor==two)
+    assert(three.predecessor == two)
   }
 
-  test("successor of one isZero should not return zero") {
-    assert(!(one.+(zero).successor==zero))
+  test("successor of one + Zero should not return zero") {
+    assert(!(one.+(zero).successor == zero))
   }
 
   test("- of zero from one should not return zero") {
@@ -30,6 +30,10 @@ class IntegerTest extends AnyFunSuite {
 
   test("- of one from one should return zero") {
     assert(one.-(one).isZero)
+  }
+  
+  test("+ of zero with one should not return zero") {
+    assert(!(one.+(zero).successor.isZero))
   }
 
 }
